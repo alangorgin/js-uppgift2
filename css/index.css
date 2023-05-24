@@ -23,21 +23,26 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
 }
 
 header #searchbar {
-    border: 1px solid grey;
-    border-radius: 5px;
     height: 7rem;
-    width: 50%;
+    width: 33%;
     outline: 0;
-    background-color: #AFD0D6;
-    font-size: 280%;
+    background-color: #A5D8FF;
+    font-size: 400%;
 }
 
-header #searchbar:hover, #searchbar:focus {
-    border: 1.5px solid rgb(163, 162, 162);
-    background-color: #c9dee1;
+button {
+    height: 7rem;
+    width: 5%;
+    border: none;
+    background-color: #A5D8FF;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 main {
@@ -48,9 +53,6 @@ main {
     height: 50vh;
     width: 100%;
     color: #AFD0D6;
-}
-
-main h2 {
     text-align: center;
 }
 

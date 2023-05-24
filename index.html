@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <script src="javascript/index.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/71891bd9da.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" type="text/css" href="/css/index.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,17 +17,22 @@
       <input
         type="text"
         id="searchbar"
-        placeholder="icon | find your location"
+        placeholder="search for the weather in..."
       />
-      <button>search</button>
+      <button>
+        <i
+          id="magnifying-glass"
+          class="fa-solid fa-magnifying-glass fa-5x"
+          style="color: #36393b"
+        ></i>
+      </button>
     </header>
     <main>
-      <h2>icon (en sol)</h2>
-      <h2>+5 grader</h2>
-      <h2>datum & tid</h2>
+      <h2 id="h2-main"></h2>
+      <h4 id="h4-main"></h4>
     </main>
     <footer>
-      <h2>Värden för temp, lufttryck, fuktighet och vind symboler...</h2>
+      <h2 id="h2-footer"></h2>
     </footer>
   </body>
 </html>
