@@ -1,18 +1,17 @@
 const apiKey = "262cd0cb3667ea5580cc6eb3a24dead2";
 
-// User searches for a location
-// We take the search term and send it to the weather API
-// We breakdown the received data and display it on the site
-
 const searchButton = document.querySelector("button");
 const tempElement = document.querySelector("#h2-main");
 const weatherDescription = document.querySelector("#h4-main");
 const footer = document.querySelector("#h2-footer");
+const searchBar = document.querySelector("#searchbar");
+const timeAndDate = document.querySelector("#h5-main");
 
+setInterval(updateTimeAndDate, 1000);
+setInterval(getAPI, 1000 * 60 * 30);
 searchButton.addEventListener("click", getAPI);
 
 async function getAPI() {
-  const searchBar = document.querySelector("#searchbar");
   const searchPhrase = searchBar.value;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchPhrase}&APPID=${apiKey}`;
   const response = await fetch(url);
@@ -30,4 +29,9 @@ async function getAPI() {
     responseBody.weather[0].description + " vibes.";
 
   footer.textContent = `Humidity: ${responseBody.main.humidity} | Pressure: ${responseBody.main.pressure} | Wind: ${responseBody.wind.speed}`;
+}
+
+function updateTimeAndDate() {
+  const date = new Date();
+  timeAndDate.textContent = date;
 }
